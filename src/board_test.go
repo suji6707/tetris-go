@@ -1,6 +1,8 @@
 package main
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestSetNewPiece(t *testing.T) {
 	board := NewBoard()
@@ -9,4 +11,9 @@ func TestSetNewPiece(t *testing.T) {
 	// 새 블록 설정
 	board.SetNewPiece()
 	board.Draw()
+}
+
+func TestPlayGameLoop(t *testing.T) {
+	game := NewGame()
+	game.PlayLoop()
 }

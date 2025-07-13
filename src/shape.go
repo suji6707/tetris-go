@@ -52,6 +52,7 @@ func NewRandomShape() *Shape {
 	return NewShape(rand.Intn(7) + 1) // 1~7
 }
 
+// 상대좌표를 절대좌표에 위치시킴
 func (s *Shape) GetCoord(direction int, x, y int) [4]Point {
 	shapeCord := ShapeCord[s.ShapeType]
 	for i := range shapeCord {
